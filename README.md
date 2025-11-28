@@ -61,7 +61,6 @@ Do NOT remove texconv.exe — the converter requires it.
 
 - Icon is bundled directly inside the EXE.  
 - texconv.exe must remain next to CovexTextureConverter.exe.  
-- Conversion runs silently using hidden processes.  
 - Drag‑and‑drop autofills the `pngs/` folder.  
 - Log panel shows all conversion messages.
 
@@ -79,4 +78,4 @@ Do NOT remove texconv.exe — the converter requires it.
 
 For bugs, feature requests, or enhancements, contact Covex Studios or open a GitHub issue.
 
-© 2025 Covex Studios
+© 2025 Covex Studio
