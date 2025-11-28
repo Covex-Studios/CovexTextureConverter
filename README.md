@@ -63,6 +63,7 @@ Do NOT remove texconv.exe — the converter requires it.
 - texconv.exe must remain next to CovexTextureConverter.exe.  
 - Drag‑and‑drop autofills the `pngs/` folder.  
 - Log panel shows all conversion messages.
+- Delete the PNGS/DDS thats already in there there placeholders!
 
 ---
 
