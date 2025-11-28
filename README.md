@@ -1,129 +1,90 @@
-# 🖼️ Covex Texture Converter  
-### PNG → DDS Converter for FiveM / GTA V  
-**By Covex Studios**
+===========================================================
+                COVEX TEXTURE CONVERTER
+          PNG → DDS Converter for FiveM / GTA V
+                    By Covex Studios
+===========================================================
 
-Covex Texture Converter is a fast, modern, drag-and-drop tool for converting **PNG textures into DDS** formats commonly used in **FiveM**, **GTA V**, and other DirectX-based engines.
+Covex Texture Converter is a fast, modern drag-and-drop tool
+for converting PNG textures into DDS formats commonly used in
+FiveM, GTA V, and other DirectX-based engines.
 
-It uses **texconv.exe** (Microsoft DirectXTex) behind the scenes, wrapped in a clean, dark/light UI built with PySide6.
+It uses texconv.exe (Microsoft DirectXTex) behind the scenes,
+wrapped in a clean dark/light UI with progress bars, presets,
+and drag-and-drop support.
 
----
+-----------------------------------------------------------
+FEATURES
+-----------------------------------------------------------
+✔ Drag & drop PNG files or folders
+✔ Batch conversion (hundreds at once)
+✔ BC1 / BC3 / BC7 output formats
+✔ FiveM preset (BC3 + full mip chain)
+✔ Dark / Light theme toggle
+✔ Modern UI with Tailwind-style design
+✔ Real-time progress bar + detailed log
+✔ No flashing CMD window during conversion
+✔ Icon fully embedded in the EXE
+✔ Fully portable – no installation required
 
-## 🚀 Features
-
-- ✔ **Drag & drop PNG files or folders**  
-- ✔ **Batch conversion** (hundreds at once)  
-- ✔ **BC1 / BC3 / BC7 format support**  
-- ✔ **FiveM preset** (BC3 + full mips)  
-- ✔ **Dark / Light theme toggle**  
-- ✔ **Real-time progress bar**  
-- ✔ **Modern UI / Tailwind-like design**  
-- ✔ **No flashing CMD windows**  
-- ✔ **Icon fully embedded inside the EXE**  
-- ✔ **Portable — no installation required**
-
----
-
-## 📦 Folder Structure
-
-Your release folder should look like:
+-----------------------------------------------------------
+FOLDER STRUCTURE (RELEASE VERSION)
+-----------------------------------------------------------
+Your release folder should look like this:
 
 CovexTextureConverter/
-├─ CovexTextureConverter.exe    ← your app
-├─ texconv.exe                  ← required for conversion
-├─ pngs/                        ← place PNGs here
-└─ output/                      ← converted DDS files appear here
+├─ CovexTextureConverter.exe      ← the app
+├─ texconv.exe                    ← required converter engine
+├─ pngs/                          ← put PNG files here
+└─ output/                        ← DDS files appear here
 
-> ⚠ IMPORTANT:  
-> Do NOT remove `texconv.exe` — the converter cannot run without it.
+IMPORTANT:
+Do NOT remove texconv.exe – the converter cannot run without it.
 
----
+-----------------------------------------------------------
+HOW TO USE
+-----------------------------------------------------------
 
-## 🧑‍💻 How to Use
+1. DROP PNGS
+Drag & drop PNG files or folders onto the window.
+They will be copied into the "pngs" folder automatically.
 
-### 1. Drop PNGs
-Drag & drop PNG files or entire folders onto the app window.  
-They will be copied automatically into the `pngs/` folder.
+2. SELECT OUTPUT FORMAT
+Choose one:
+- BC1_UNORM (no alpha)
+- BC3_UNORM (good for FiveM, supports alpha)
+- BC7_UNORM (highest quality)
 
-### 2. Choose the output format
-- BC1_UNORM — best for textures without alpha  
-- BC3_UNORM — best for FiveM / GTA (supports alpha)  
-- BC7_UNORM — modern high-quality compression  
+3. APPLY FIVEM PRESET (OPTIONAL)
+Click “For FiveM preset”
+→ sets BC3 + full mip chain.
 
-### 3. Use the FiveM preset (recommended)
-Click “For FiveM preset” → sets BC3 + full mip chain.
-
-### 4. Convert
+4. START CONVERSION
 Click “Start Conversion”.
 
-Your converted DDS files will appear in the `output/` folder.
+Converted DDS files will appear in the "output" folder.
 
----
+-----------------------------------------------------------
+NOTES
+-----------------------------------------------------------
+• The icon is embedded in the EXE using PyInstaller.
+• texconv.exe must remain next to CovexTextureConverter.exe.
+• CMD windows are hidden during conversion (silent mode).
+• Drag-and-drop auto-imports PNGs into the "pngs" folder.
+• The log panel shows the status of every conversion.
 
-## 🛠 Building the EXE (Developers)
+-----------------------------------------------------------
+SYSTEM REQUIREMENTS
+-----------------------------------------------------------
+• Windows 10/11
+• No Python required
+• No installation required (fully portable)
 
-To generate the EXE using PyInstaller:
+-----------------------------------------------------------
+SUPPORT
+-----------------------------------------------------------
+For feature requests, UI redesigns, bug reports, or custom
+presets, feel free to open an issue or contact Covex Studios.
 
-1. Enter the directory containing:
-   - covex_converter.py
-   - icon.ico
-
-2. Run:
-
-rmdir /S /Q build dist 2>nul
-
-pyinstaller ^
-  --onefile ^
-  --noconsole ^
-  --name CovexTextureConverter ^
-  --icon=icon.ico ^
-  --add-data "icon.ico;." ^
-  covex_converter.py
-
-This creates:
-
-dist/CovexTextureConverter.exe
-
-Move it into your release folder alongside:
-
-- texconv.exe
-- pngs/
-- output/
-
----
-
-## 🔧 Developer Requirements
-
-If running from source:
-
-pip install PySide6
-
-Python 3.9+ recommended.
-
----
-
-## 📝 Notes
-
-- The icon is embedded using --add-data and loaded from the PyInstaller bundle.  
-- texconv.exe must be shipped next to the main EXE.  
-- Conversion uses CREATE_NO_WINDOW to prevent CMD popping up.  
-- Drag-and-drop auto-imports PNGs into the pngs/ folder.  
-- The UI logs conversion progress and maintains a file count.
-
----
-
-## 🧵 Support
-
-Want additional features?
-
-- Custom UI themes  
-- Auto-updater  
-- Texture preview  
-- Installer builder  
-- New formats or presets  
-- New icon / branding
-
-Just open an issue or reach out.
-
----
-
+-----------------------------------------------------------
 © 2025 Covex Studios — All Rights Reserved
+===========================================================
