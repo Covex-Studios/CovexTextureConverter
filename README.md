@@ -3,7 +3,9 @@ PNG → DDS Converter for FiveM / GTA V
 By Covex Studios
 
 A modern drag‑and‑drop texture converter for FiveM / GTA V using texconv.exe internally.  
-Clean UI, dark/light mode, presets, progress bar, and no CMD flashing.
+Clean UI, dark/light mode, presets, progress bar.
+
+<img width="1022" height="651" alt="image" src="https://github.com/user-attachments/assets/f8fc1f44-fb95-4816-aa71-4bdbfa249324" />
 
 ---
 
