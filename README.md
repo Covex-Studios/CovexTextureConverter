@@ -1,90 +1,82 @@
-===========================================================
-                COVEX TEXTURE CONVERTER
-          PNG → DDS Converter for FiveM / GTA V
-                    By Covex Studios
-===========================================================
+# 🖼️ Covex Texture Converter  
+PNG → DDS Converter for FiveM / GTA V  
+By Covex Studios
 
-Covex Texture Converter is a fast, modern drag-and-drop tool
-for converting PNG textures into DDS formats commonly used in
-FiveM, GTA V, and other DirectX-based engines.
+A modern drag‑and‑drop texture converter for FiveM / GTA V using texconv.exe internally.  
+Clean UI, dark/light mode, presets, progress bar, and no CMD flashing.
 
-It uses texconv.exe (Microsoft DirectXTex) behind the scenes,
-wrapped in a clean dark/light UI with progress bars, presets,
-and drag-and-drop support.
+---
 
------------------------------------------------------------
-FEATURES
------------------------------------------------------------
-✔ Drag & drop PNG files or folders
-✔ Batch conversion (hundreds at once)
-✔ BC1 / BC3 / BC7 output formats
-✔ FiveM preset (BC3 + full mip chain)
-✔ Dark / Light theme toggle
-✔ Modern UI with Tailwind-style design
-✔ Real-time progress bar + detailed log
-✔ No flashing CMD window during conversion
-✔ Icon fully embedded in the EXE
-✔ Fully portable – no installation required
+## 🚀 Features
 
------------------------------------------------------------
-FOLDER STRUCTURE (RELEASE VERSION)
------------------------------------------------------------
-Your release folder should look like this:
+- Drag & drop PNG files or folders  
+- Batch conversion  
+- BC1 / BC3 / BC7 formats  
+- FiveM preset (BC3 + full mip chain)  
+- Light / Dark theme toggle  
+- Real‑time progress bar  
+- Silent conversion (no CMD window)  
+- Embedded app icon  
+- Fully portable (no install)
 
+---
+
+## 📁 Folder Structure (Release)
+
+Your release folder should look like:
+
+```
 CovexTextureConverter/
-├─ CovexTextureConverter.exe      ← the app
-├─ texconv.exe                    ← required converter engine
-├─ pngs/                          ← put PNG files here
-└─ output/                        ← DDS files appear here
+├─ CovexTextureConverter.exe      ← main application
+├─ texconv.exe                    ← required conversion engine
+├─ pngs/                          ← place PNG files here
+└─ output/                        ← converted DDS files appear here
+```
 
-IMPORTANT:
-Do NOT remove texconv.exe – the converter cannot run without it.
+Do NOT remove texconv.exe — the converter requires it.
 
------------------------------------------------------------
-HOW TO USE
------------------------------------------------------------
+---
 
-1. DROP PNGS
-Drag & drop PNG files or folders onto the window.
-They will be copied into the "pngs" folder automatically.
+## 🧑‍🏫 How to Use
 
-2. SELECT OUTPUT FORMAT
-Choose one:
-- BC1_UNORM (no alpha)
-- BC3_UNORM (good for FiveM, supports alpha)
-- BC7_UNORM (highest quality)
+1. **Drag & Drop**  
+   Drop PNG files or folders anywhere in the app.  
+   They are copied into the `pngs/` folder automatically.
 
-3. APPLY FIVEM PRESET (OPTIONAL)
-Click “For FiveM preset”
-→ sets BC3 + full mip chain.
+2. **Select Output Format**  
+   - BC1_UNORM (no alpha)  
+   - BC3_UNORM (FiveM recommended)  
+   - BC7_UNORM (high quality)
 
-4. START CONVERSION
-Click “Start Conversion”.
+3. **FiveM Preset**  
+   Click “For FiveM preset” to auto‑configure BC3 + full mips.
 
-Converted DDS files will appear in the "output" folder.
+4. **Convert**  
+   Press **Start Conversion**.  
+   DDS files appear in the `output/` folder.
 
------------------------------------------------------------
-NOTES
------------------------------------------------------------
-• The icon is embedded in the EXE using PyInstaller.
-• texconv.exe must remain next to CovexTextureConverter.exe.
-• CMD windows are hidden during conversion (silent mode).
-• Drag-and-drop auto-imports PNGs into the "pngs" folder.
-• The log panel shows the status of every conversion.
+---
 
------------------------------------------------------------
-SYSTEM REQUIREMENTS
------------------------------------------------------------
-• Windows 10/11
-• No Python required
-• No installation required (fully portable)
+## 📝 Notes
 
------------------------------------------------------------
-SUPPORT
------------------------------------------------------------
-For feature requests, UI redesigns, bug reports, or custom
-presets, feel free to open an issue or contact Covex Studios.
+- Icon is bundled directly inside the EXE.  
+- texconv.exe must remain next to CovexTextureConverter.exe.  
+- Conversion runs silently using hidden processes.  
+- Drag‑and‑drop autofills the `pngs/` folder.  
+- Log panel shows all conversion messages.
 
------------------------------------------------------------
-© 2025 Covex Studios — All Rights Reserved
-===========================================================
+---
+
+## 💻 Requirements
+
+- Windows 10 / 11  
+- No Python required  
+- Portable single‑EXE tool
+
+---
+
+## 🧵 Support
+
+For bugs, feature requests, or enhancements, contact Covex Studios or open a GitHub issue.
+
+© 2025 Covex Studios
